@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/pyhedgehog/saltcorn-edit-qrcode/issues"
   },
-  "homepage": "https://github.com/pyhedgehog/saltcorn-edit-qrcode#readme"
+  "homepage": "https://github.com/pyhedgehog/saltcorn-edit-qrcode#readme",
+  "dependencies": {
+    "@saltcorn/markup": "^0.8.7-beta.4"
+  }
 }
