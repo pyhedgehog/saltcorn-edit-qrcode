@@ -1,0 +1,25 @@
+{
+  "name": "saltcorn-qrcode",
+  "version": "1.0.0",
+  "description": "Allow to view URL (or any string field) as a QR-Code image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pyhedgehog/saltcorn-edit-qrcode.git"
+  },
+  "keywords": [
+    "saltcorn",
+    "qr",
+    "qrcode",
+    "widget"
+  ],
+  "author": "Michael P. Dubner <pywebmail@list.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pyhedgehog/saltcorn-edit-qrcode/issues"
+  },
+  "homepage": "https://github.com/pyhedgehog/saltcorn-edit-qrcode#readme"
+}
