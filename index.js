@@ -1,5 +1,5 @@
-const util = require('util');
-const { img } = require('@saltcorn/markup/tags');
+const util = require("util");
+const { img } = require("@saltcorn/markup/tags");
 
 const qrcode = {
   type: "String",
@@ -8,7 +8,7 @@ const qrcode = {
     {
       name: "size",
       label: "Size",
-      type: 'Integer',
+      type: "Integer",
       sublabel: "Size of QR-code in pixels",
       default: 50,
       attributes: { max: 1000, min: 30 },
@@ -16,19 +16,20 @@ const qrcode = {
     {
       name: "border",
       label: "White border",
-      type: 'Bool',
+      type: "Bool",
       sublabel: "Add white border around QR-code",
-      default: false
-    }
+      default: false,
+    },
   ],
-  run: function(v, req, attrs) {
-    var url = new URL('https://chart.googleapis.com/chart');
-    url.searchParams.set('cht', 'qr');
-    url.searchParams.set('chs', `${attrs.size || 150}x${attrs.size || 150}`);
-    url.searchParams.set('chl', String(v));
-    url.searchParams.set('chld', `L|${attrs.border?1:0}`);
-    return img({src: url.toString()});
-  }
+  run: function (v, req, attrs) {
+    const size = attrs.size || 150;
+    let url = new URL("https://chart.googleapis.com/chart");
+    url.searchParams.set("cht", "qr");
+    url.searchParams.set("chs", `${size}x${size}`);
+    url.searchParams.set("chl", String(v));
+    url.searchParams.set("chld", `L|${attrs.border ? 1 : 0}`);
+    return img({ src: url.toString(), width: size, height: size });
+  },
 };
 
 module.exports = {
